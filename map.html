@@ -1,0 +1,1407 @@
+
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bishops Arms</title>
+    <link rel="stylesheet" href="assets/sass/pages/map.css">
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        function createMap() {
+
+            var opts = {
+                center: {
+                    lat: 61.902157,
+                    lng: 17.792069,
+                },
+                zoom: 5,
+                styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#f2cb54"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#211d1a"}]},{"featureType":"administrative.country","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"weight":"5"}]},{"featureType":"administrative.province","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#c41618"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#c41618"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#f2cb54"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"simplified"},{"color":"#f2cb54"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"},{"color":"#f2cb54"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#211d1a"}]}],
+                maxZoom: 20,
+                minZoom: 0,
+                mapTypeId: 'roadmap',
+            };
+
+
+            opts.clickableIcons = true;
+            opts.disableDoubleClickZoom = false;
+            opts.draggable = true;
+            opts.keyboardShortcuts = true;
+            //opts.scrollwheel = true;
+
+
+
+            var setControlOptions = function (key, enabled, position, style, mapTypeIds) {
+                opts[key + 'Control'] = enabled;
+                opts[key + 'ControlOptions'] = {
+                    position: google.maps.ControlPosition[position],
+                    style: google.maps.MapTypeControlStyle[style],
+                    mapTypeIds: mapTypeIds
+                };
+            };
+
+
+            setControlOptions('fullscreen', true, 'DEFAULT', '', null);
+
+
+            setControlOptions('mapType', false, 'DEFAULT', 'DEFAULT', ["roadmap", "satellite", "terrain"]);
+
+
+            setControlOptions('rotate', false, 'TOP_LEFT', '', null);
+
+
+            setControlOptions('scale', false, '', '', null);
+
+
+            setControlOptions('streetView', false, 'DEFAULT', '', null);
+
+
+            setControlOptions('zoom', true, 'TOP_LEFT', '', null);
+
+
+            var map = new google.maps.Map(document.getElementById('map'), opts);
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 59.3650618,
+                        lng: 18.0647391,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-da484306-750f-4c39-af62-a1e2a4e86909.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Bellmansgatan", "_parent");
+                    parent.document.getElementById('Bellmansgatan').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 59.3231651,
+                        lng: 18.0691237,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-d2fac4da-20ac-42e7-8342-406fd6e7ee93.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Gamla-Stan", "_parent");
+                    parent.document.getElementById('Gamla-Stan').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 59.3321433,
+                        lng: 18.0574654,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-832cb802-5405-442f-90e7-151b3766700b.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Vasagatan", "_parent");
+                    parent.document.getElementById('Vasagatan').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 59.31586,
+                        lng: 18.03744,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-eb1c1164-3bab-4e90-a8b2-d94aba8bb167.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Hornsgatan", "_parent");
+                    parent.document.getElementById('Hornsgatan').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 59.36115,
+                        lng: 17.96878,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-d3f9f8ce-85bd-41eb-8ddc-ea535a1cae9f.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Sundbyberg", "_parent");
+                    parent.document.getElementById('Sundbyberg').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 58.28537,
+                        lng: 12.29041,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-cf23a056-1f65-4327-9180-49413d2d205d.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Trollhättan", "_parent");
+                    parent.document.getElementById('Trollhättan').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 57.69948,
+                        lng: 11.95332,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-317c430f-7bab-4360-91f8-bae3820c6c30.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Järntorget", "_parent");
+                    parent.document.getElementById('Järntorget').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 63.17885,
+                        lng: 14.63596,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-f2490895-2ccc-4aef-8ccd-67e3c7c8b9f0.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Östersund", "_parent");
+                    parent.document.getElementById('Östersund').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 56.1576,
+                        lng: 13.76605,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-fe53277f-8372-4126-9fe7-5fa9f47be32f.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Hässleholm", "_parent");
+                    parent.document.getElementById('Hässleholm').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 57.72016,
+                        lng: 12.93651,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-5a32212e-ae4b-4657-905b-04055da5ac8c.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Borås", "_parent");
+                    parent.document.getElementById('Borås').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 58.39,
+                        lng: 13.84529,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-6ada721a-e870-453c-9e31-3f32a7c582ed.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Skövde", "_parent");
+                    parent.document.getElementById('Skövde').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 63.82602,
+                        lng: 20.26014,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-7dcc6e73-5851-44f3-937d-4be7600fa6f4.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Umeå", "_parent");
+                    parent.document.getElementById('Umeå').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 64.7513,
+                        lng: 20.95435,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-fb2ce3ea-96a8-4de5-a4aa-769ddaca2e51.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Skellefteå", "_parent");
+                    parent.document.getElementById('Skellefteå').click();
+                });
+
+            })();
+
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 60.60592,
+                        lng: 15.63009,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-72aae9c3-3ff9-4fa5-9bc4-86870518ec19.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Falun", "_parent");
+                    parent.document.getElementById('Falun').click();
+                });
+
+            })();
+
+
+            (function () {
+                var markerOptions = {
+                    map: map,
+                    position: {
+                        lat: 58.41189,
+                        lng: 15.62511,
+                    }
+                };
+
+                markerOptions.icon = {
+                    url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-1f5ef29c-71a5-4ef7-95bc-d966736374fb.png',
+                    scaledSize: new google.maps.Size(
+                        32,
+                        32),
+                    size: new google.maps.Size(
+                        32,
+                        32),
+                    anchor: new google.maps.Point(
+                        16,
+                        32)
+                };
+                markerOptions.options = {
+                    optimized: true,
+                };
+
+                var marker = new google.maps.Marker(markerOptions);
+
+                google.maps.event.addListener(marker, 'click', function () {
+                    window.open("restauranger.html#Linköping", "_parent");
+                    parent.document.getElementById('Linköping').click();
+                });
+
+            })();
+
+            /*
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 55.7063,
+                                lng: 13.19115,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-1b5c9d5f-5f8d-48e8-a72a-aa8bb4083e0b.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 56.03243,
+                                lng: 14.15214,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-21c12cf6-da2b-461f-8b53-08a06bf32d10.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 67.8548,
+                                lng: 20.22816,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-8a652b6a-370a-4ef7-913f-97eb699d0e55.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 65.31626,
+                                lng: 21.48257,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-da656cc6-b654-4d68-bdd5-7485b901d171.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.37658,
+                                lng: 17.02751,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-f7356512-c128-4f47-8a23-c1a1459e565b.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.51209,
+                                lng: 15.99451,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-ead21aea-b62c-4ff6-be7e-b37b8d82cbdd.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 61.00487,
+                                lng: 14.537,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-4ad405e9-d440-4d29-a0c2-8706a29a0ce1.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.33836,
+                                lng: 18.07514,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-1631e494-7294-4b10-8156-68f37311e858.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.34645,
+                                lng: 18.03975,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-9a6fb241-b6de-4832-b005-31af28ee1e40.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.37228,
+                                lng: 16.51555,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-32862fba-cfb7-4dee-955c-1c94005e6bda.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 57.69854,
+                                lng: 11.9782,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-dd3f3921-5c48-47f9-b655-6d4102b73b41.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 57.70506,
+                                lng: 11.96262,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-b4eb6e22-92ff-4533-885f-1dfbe3b583ce.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 57.78288,
+                                lng: 14.16939,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-fffa3b52-92cc-4908-a176-f5026dbc24c0.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.38135,
+                                lng: 13.50026,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-f5109def-f776-4a0d-97e0-58c2da405452.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 65.583695,
+                                lng: 22.145432,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-51de0d67-fc60-4769-85c9-275afd1f1565.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 55.603208,
+                                lng: 12.999493,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-a3dab163-3767-43e5-925c-75c619ff674a.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 55.60766,
+                                lng: 13.00036,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-646e4215-eed6-41f0-b86b-b60aa114d59a.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 56.04695,
+                                lng: 12.69571,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-78b8330d-fe6d-4083-823f-e689ed92e9fe.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 56.04434,
+                                lng: 12.6926,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-80c2ef6d-34fc-43c8-95a7-3d5ddf743191.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 58.592986,
+                                lng: 16.186429,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-e6923c52-0b35-49e6-b869-1faf3fa3e7be.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.273103,
+                                lng: 15.213616,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-02776cd9-0abc-4c10-815b-7155678f97e7.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 63.287158,
+                                lng: 18.713387,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-3428edee-adf7-433e-bead-055e10ac017d.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 62.390163,
+                                lng: 17.311118,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-b0048c69-47e8-404a-a1fa-2e0106905fc6.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.857017,
+                                lng: 17.648068,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-d7874bf6-a63f-4a02-9d15-641bc5bf5750.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 59.611366,
+                                lng: 16.542661,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-b6866463-1b26-43a2-b018-4e7d398f7250.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    
+                    
+                    (function(){
+                        var markerOptions = {
+                            map: map,
+                            position: {
+                                lat: 56.877699,
+                                lng: 14.809168,
+                            }
+                        };
+                        
+                        markerOptions.icon = {
+                            url: 'https://snazzy-maps-cdn.azureedge.net/assets/marker-2258649e-11df-42d4-bc2e-a5f0f3063be3.png',
+                            scaledSize: new google.maps.Size(
+                                32,
+                                32),
+                            size: new google.maps.Size(
+                                32,
+                                32),
+                            anchor: new google.maps.Point(
+                                16,
+                                32)
+                        };
+                        markerOptions.options = {
+                            optimized: true,
+                        };
+                        
+                        var marker = new google.maps.Marker(markerOptions);
+    
+    
+                    })();
+                    */
+
+        }
+    </script>
+
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABRLfAg5RSBTJSBCygTDNyGgMfLm1MAuE&v=3.31&language=en&libraries=places,geometry&callback=createMap">
+    </script>
+</body>
+
+</html>
